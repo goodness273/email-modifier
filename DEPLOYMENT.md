@@ -31,8 +31,9 @@ This guide covers deploying your Email Modifier app to Vercel.
    - Click "Environment Variables"
    - Add a variable with:
      - Name: `GEMINI_API_KEY`
-     - Value: Your Gemini API key
+     - Value: Your Gemini API key (paste the actual API key value here)
    - Make sure it's added to Production, Preview, and Development environments
+   - Note: Do NOT prefix the value with '@' or reference a secret - just enter the actual API key value
 
 3. Click "Deploy"
 
@@ -46,19 +47,24 @@ This guide covers deploying your Email Modifier app to Vercel.
 
 If you encounter issues with your deployment:
 
-1. **Deployment Fails**
+1. **Environment Variable Error**
+
+   - If you see an error like "Environment Variable references Secret, which does not exist" - make sure you're entering the actual API key as the value, not a reference to a secret
+   - You can update environment variables after deployment in Project Settings > Environment Variables
+
+2. **Deployment Fails**
 
    - Check Vercel build logs for specific errors
    - Ensure all dependencies are properly installed
    - Verify your Next.js configuration is correct
 
-2. **API Not Working**
+3. **API Not Working**
 
    - Confirm your `GEMINI_API_KEY` is correctly set in Vercel environment variables
    - Check browser console for any API-related errors
    - Verify the API route is correctly implemented
 
-3. **Other Issues**
+4. **Other Issues**
    - Check that you're using the correct versions of packages
    - Ensure your code doesn't have any TypeScript errors
 
