@@ -81,7 +81,7 @@ export default function EmailForm({ onSubmit, loading }: EmailFormProps) {
             type="text"
             value={receiverName}
             onChange={(e) => setReceiverName(e.target.value)}
-            placeholder="Recipient's name"
+            placeholder="Recipient&apos;s name"
             className="w-full p-3 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400 dark:placeholder-gray-500"
           />
         </div>

@@ -16,10 +16,10 @@ export default function EmailResult({ modifiedEmail, onReset }: EmailResultProps
     cleaned = cleaned.replace(/^I\'ve(.+?)\n+/gim, '');
     cleaned = cleaned.replace(/^I have(.+?)\n+/gim, '');
     
-    // Remove any section starting with "Changes made:" or similar
-    cleaned = cleaned.replace(/\n+Changes made:(.+?)$/si, '');
-    cleaned = cleaned.replace(/\n+Improvements:(.+?)$/si, '');
-    cleaned = cleaned.replace(/\n+Note:(.+?)$/si, '');
+    // Remove any section starting with "Changes made:" or similar - using multiline instead of dotAll
+    cleaned = cleaned.replace(/\n+Changes made:[\s\S]*?$/im, '');
+    cleaned = cleaned.replace(/\n+Improvements:[\s\S]*?$/im, '');
+    cleaned = cleaned.replace(/\n+Note:[\s\S]*?$/im, '');
     
     return cleaned.trim();
   };
