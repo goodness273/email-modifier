@@ -49,6 +49,33 @@ A Next.js application that uses Google's Gemini API to polish and refine email d
 
 2. Open [http://localhost:3000](http://localhost:3000) in your browser to use the application.
 
+## Deployment to Vercel
+
+Follow these steps to deploy the Email Modifier to Vercel:
+
+1. Install the Vercel CLI (optional):
+
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Deploy using the Vercel CLI:
+
+   ```bash
+   vercel
+   ```
+
+   Or connect your GitHub repository to Vercel for automatic deployments.
+
+3. Set up the Gemini API Key as an environment variable:
+
+   - Go to your Vercel project settings
+   - Navigate to the "Environment Variables" tab
+   - Add a new variable named `GEMINI_API_KEY` with your API key
+   - Redeploy your application if necessary
+
+4. Your application will be available at the Vercel-assigned URL
+
 ## How to Use
 
 1. Enter your email draft in the main text area
@@ -61,9 +88,9 @@ A Next.js application that uses Google's Gemini API to polish and refine email d
 
 ## Technologies Used
 
-- Next.js 14
-- React
-- Tailwind CSS
+- Next.js 15
+- React 19
+- Tailwind CSS 4
 - Google Generative AI (Gemini 2.0 Flash)
 
 ## License
@@ -74,5 +101,3 @@ MIT
 
 - Google for providing the Gemini API
 - Next.js team for the framework
-# email-modifier
-# email-modifier
