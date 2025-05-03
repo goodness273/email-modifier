@@ -60,7 +60,7 @@ export default function EmailForm({ onSubmit, loading }: EmailFormProps) {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="senderName" className="block text-sm font-medium dark:text-gray-200">
-            Sender's Name (Optional)
+            Sender&apos;s Name (Optional)
           </label>
           <input
             id="senderName"
@@ -74,7 +74,7 @@ export default function EmailForm({ onSubmit, loading }: EmailFormProps) {
 
         <div className="space-y-2">
           <label htmlFor="receiverName" className="block text-sm font-medium dark:text-gray-200">
-            Receiver's Name (Optional)
+            Receiver&apos;s Name (Optional)
           </label>
           <input
             id="receiverName"

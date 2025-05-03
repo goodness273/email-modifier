@@ -6,7 +6,6 @@ const nextConfig = {
   },
   
   // Optional: Configure other settings
-  swcMinify: true,
   reactStrictMode: true,
 };
 
