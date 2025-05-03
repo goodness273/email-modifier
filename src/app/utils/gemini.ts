@@ -40,18 +40,10 @@ ${emailDraft}`;
     // Add a final instruction to emphasize not including explanations
     prompt += `\n\nIMPORTANT: Do not include any explanations, reasoning, or notes about what was changed. Just provide the improved email text directly.`;
 
-    // Generate content using the Gemini model
-    const result = await model.generateContent({
-      contents: [
-        {
-          parts: [
-            { text: prompt }
-          ]
-        }
-      ]
-    });
+    // Generate content using the Gemini model - updated API format
+    const result = await model.generateContent(prompt);
     
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
     
     return text;
